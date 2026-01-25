@@ -1,4 +1,4 @@
-package lab01
+package lab01.lab01
 
 open class Human(
     val name: String,

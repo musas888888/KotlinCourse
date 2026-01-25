@@ -1,7 +1,7 @@
-package lab01
+package lab01.lab01
 
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Assertions.*
 
 internal class StudyRegisterTest {
 
@@ -38,15 +38,15 @@ internal class StudyRegisterTest {
     @Test
     fun testAverage() {
         createStudents()
-        assertEquals(2.7692, students[0].weightedAverage(), 0.001)
+        Assertions.assertEquals(2.7692, students[0].weightedAverage(), 0.001)
     }
 
     @Test
     fun testMinMax() {
         createStudents()
         val (minGrade, maxGrade) = students[0].minMaxGrades()
-        assertEquals(1.0, minGrade, 0.001)
-        assertEquals(5.0, maxGrade, 0.001)
+        Assertions.assertEquals(1.0, minGrade, 0.001)
+        Assertions.assertEquals(5.0, maxGrade, 0.001)
     }
 
     @Test
@@ -58,13 +58,13 @@ internal class StudyRegisterTest {
         }
 
         val (majorMin, majorMax, majorAverage) = major.stats()
-        assertEquals(2.0, majorMin, 0.001)
-        assertEquals(4.5, majorMax, 0.001)
-        assertEquals(3.0897, majorAverage, 0.001)
+        Assertions.assertEquals(2.0, majorMin, 0.001)
+        Assertions.assertEquals(4.5, majorMax, 0.001)
+        Assertions.assertEquals(3.0897, majorAverage, 0.001)
 
         val (majorMin2, majorMax2, majorAverage2) = major.stats("Kotlin basics")
-        assertEquals(2.0, majorMin2, 0.001)
-        assertEquals(4.5, majorMax2, 0.001)
-        assertEquals(3.6666, majorAverage2, 0.001)
+        Assertions.assertEquals(2.0, majorMin2, 0.001)
+        Assertions.assertEquals(4.5, majorMax2, 0.001)
+        Assertions.assertEquals(3.6666, majorAverage2, 0.001)
     }
 }
