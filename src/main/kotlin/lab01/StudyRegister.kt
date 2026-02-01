@@ -1,15 +1,13 @@
 package lab01.lab01
 
-open class Human(
-    val name: String,
-    var age: Int
-) {
+open class Human(val name: String, var age: Int)
+{
     fun getOlder() {
         age++
     }
 }
 
-// CourseRecord-luokka
+//CourseRecord-luokka
 data class CourseRecord(
     val name: String,
     val yearCompleted: Int,
@@ -18,10 +16,7 @@ data class CourseRecord(
 )
 
 // Student-luokka (perii Humanin)
-class Student(
-    name: String,
-    age: Int
-) : Human(name, age) {
+class Student(name: String, age: Int) : Human(name, age) {
 
     private val courses = ArrayList<CourseRecord>()
 
@@ -53,9 +48,7 @@ class Student(
 }
 
 // Major-luokka
-class Major(
-    val name: String
-) {
+class Major(val name: String){
     private val students = ArrayList<Student>()
 
     fun addStudent(student: Student) {
